@@ -1,1 +1,2 @@
-# python-3C
+# Jogo-Adivinha-o
+Aulas de Python
