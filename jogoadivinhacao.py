@@ -6,6 +6,7 @@ print('*********************************')
 
 #Definindo o número secreto50
 numeroSecreto = random.randrange(1,101)
+
 #print(numeroSecreto)
 
 #Definindo o número de tentativas e rodada
@@ -36,7 +37,7 @@ while(rodada <= numeroTentativas):
 
 #Declarando as condições
     if (numeroSecreto == chute):
-        print('Você acertou!')
+        print('Você acertou!E sua pontuaçao foi:' ,pontos)
         break
     elif(chute>numeroSecreto):
         print('Você errou!! O número secreto é um número menor')
