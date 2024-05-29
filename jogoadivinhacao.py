@@ -1,59 +1,45 @@
 import random;
-def jogar_adivinhção():
+
+def jogar_adivinhacao():
+
 
     print('*********************************')
     print('Bem vindo, ao JOGO DE ADIVINHAÇÃO')
     print('*********************************')
 
-    #definindo o  numero secreto
-    numeroSecreto = random.randrange(1,101)
+    #Definindo o número secreto
+    numeroSecreto = random.randrange(1,101) 
     #print(numeroSecreto)
+    #Definindo o número de tentativas e rodada
+    numeroTentativas = 10
+    rodada = 1
 
+    print("Qual o nível de dificuldade?")
+    print("(1)-Fácil, (2)-Médio, (3)-Difícil")
 
-    #Definindo o numero de tentativas
-    numerotentativas = 0
-    rodada=1
-    pontos = 1000
+    nivel = int(input("Defina o nível: "))
 
-    print(" Qual o nível de dificuldade?")
-    print("(1)-Facíl,(2)-médio,(3)-difícil")
-
-    nivel = int(input("Defina o nível:"))
-
-    #vamos mudar o numero de tentativas conforme a dificuldade
-    if(nivel == 1):
-        numerotentativas=18
-    elif(nivel==2):
-        numerotentativas=8
-    else:
-        numerotentativas=5
-
-    while(rodada<= numerotentativas):
-        print('tentativa',rodada, 'de',numerotentativas)
-
+    while(rodada <= numeroTentativas):
+        print('Tentativa',rodada, 'de' , numeroTentativas)
 
     #Recebendo o chute do jogador
-        chuteString = input('Digite um número: ')
-
-
-        chute = int (chuteString)
+        chuteString = input('Digite um número entre 1 e 100: ')
+        chute = int(chuteString)
 
     #Declarando as condições
         if (numeroSecreto == chute):
-            print('Você acertou!e sua pontuação foi:', pontos)
+            print('Você acertou!')
             break
         elif(chute>numeroSecreto):
-            print('Voce errou!! O número secreto é numero menor')
+            print('Você errou!! O número secreto é um número menor')
         else:
-            print('Você errou!! O numero secreto é um número maior')
-        pontos_perdidos = abs(numeroSecreto - chute);
-        pontos = pontos - pontos_perdidos
+            print('Você errou!! O número secreto é um número maior')
 
-        #numerotentativas = numerotentativas - 1
+        #numeroTentativas = numeroTentativas - 1
         rodada = rodada + 1
 
-
-
+if(__name__ == "__main__"):
+    jogar_adivinhacao()
 
 
 
