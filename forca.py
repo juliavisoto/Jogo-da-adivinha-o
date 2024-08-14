@@ -22,24 +22,21 @@ def jogar_forca():
         for letra in palavraSecreta:
             if(chute.upper() == letra.upper()):
                 letras_acertadas[index] = letra
-            index += 1
+            index += 1 #index = index + 1
 
-        else: 
-            erros += 1  
+        else:
+            erros += 1 #erros = erros + 1
 
         enforcou = erros == 6
-        acertou = "_" 
+        acertou = "_" not in letras_acertadas
         print(letras_acertadas)        
                 
         print("Escolha outra letra!")
-    
+
     if(acertou):
-        print("voce acertou!")
+        print("Você acertou!")
     else:
-        print("voce perdeu o jogo!")
-
-
-
+        print("Você perdeu o jogo!")
 
     print("Fim de jogo!")
 
